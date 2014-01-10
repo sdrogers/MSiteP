@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+	
+	<head>
+		<title>Playing</title>
+	</head>
+	
+	<body>
+		<h1>So, this is</h1>
+		{% if categories %}
+			<ul>
+				{% for category in categories %}
+				<li>{{ category.name }}</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<strong> There are no categories </strong>
+		{% endif %}
+		<A href="/playing/about">About</A><br />
+	</body>
+
+</html>
