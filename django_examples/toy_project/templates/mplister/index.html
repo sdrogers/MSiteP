@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>List of parites</title>
+	</head>
+
+	<body>
+	<a href="/mplister/">Home</a><br />
+	{% if parties %}
+		<ul>
+			{% for party in parties %}
+			<li> <a href="/mplister/party/{{ party.name }}">{{ party.name }}</a> </li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<h1>No parties defined</h1>
+	{% endif %}
+	<br />
+	{% if MSP %}
+	<ul>
+		{% for m in MSP %}
+		<li> <A href="/mplister/msp/{{ m.url }}">{{ m.name }}</A>, {{ m.party }} </li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>No MSPs defined</p>
+	{% endif %}
+	</body>
+
+
+</html>
