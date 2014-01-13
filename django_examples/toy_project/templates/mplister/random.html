@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<body>
+	{% if msp_name %}
+	<strong>Your random MSP is: {{ msp_name }}</strong>
+	<ul>
+		<li><b>Party</b> {{ party }}</li>
+		<li><b>Constituency</b> {{ constituency }}</li>
+		<li><b>Notes</b> {{ notes }}</li>
+	</ul>
+	{% else %}
+	<strong>Something went wrong</strong>
+	{% endif %}
+
+</html>
