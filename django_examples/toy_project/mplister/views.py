@@ -35,6 +35,7 @@ def msp(request,msp_name_url):
 		context_dict['msp_name'] = m.name
 		context_dict['party'] = m.party
 		context_dict['constituency'] = m.constituency
+		context_dict['notes'] = m.notes
 	except:
 		pass
 

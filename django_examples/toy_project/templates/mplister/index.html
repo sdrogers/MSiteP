@@ -1,11 +1,8 @@
-<!DOCTYPE html>
+{% extends 'mplister/base.html' %}
 
-<html>
-	<head>
-		<title>List of parites</title>
-	</head>
+{% block title %}List of parties{% endblock %}
 
-	<body>
+{% block bodyblock %}
 	<a href="/mplister/">Home</a><br />
 	{% if parties %}
 		<ul>
@@ -26,7 +23,4 @@
 	{% else %}
 	<p>No MSPs defined</p>
 	{% endif %}
-	</body>
-
-
-</html>
+{% endblock %}
