@@ -1,18 +1,13 @@
-<!DOCTYPE html>
- {% load static %}
-<html>
-	<head> 
-	<link rel="stylesheet" type="text/css" href= "{% static "mplister.css" %}" />
-	 </head>
+{% extends 'mplister/base.html' %}
 
-	 <body>
-	 <a href="/mplister/">Home</a><br />
+{% block title %}Single MSP{% endblock %}
+{% block bodyblock %}
+<div>
 	 {% if msp_name %}
-	 <h1 class="blue"> {{msp_name}}</h1>
+	 <h1> {{msp_name}}</h1>
 	 <p>Party: <a href="/mplister/party/{{ party }}">{{ party }}</a> </p>
-	 <p>Constituence: {{ constituency }}
+	 <p>Constituence: {{ constituency }}</p>
 	 <p>Notes: {{ notes }}</p>
 	 {% endif %}
-	 </body>
-
-</html>
+</div>
+{% endblock %}
