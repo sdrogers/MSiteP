@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-
+ {% load static %}
 <html>
 	<head> 
+	<link rel="stylesheet" type="text/css" href= "{% static "mplister.css" %}" />
 	 </head>
 
 	 <body>
 	 <a href="/mplister/">Home</a><br />
 	 {% if msp_name %}
-	 <h1> {{msp_name}}
+	 <h1 class="blue"> {{msp_name}}</h1>
 	 <p>Party: <a href="/mplister/party/{{ party }}">{{ party }}</a> </p>
 	 <p>Constituence: {{ constituency }}
+	 <p>Notes: {{ notes }}</p>
 	 {% endif %}
 	 </body>
 

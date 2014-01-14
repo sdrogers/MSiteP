@@ -10,6 +10,7 @@ class MSP(models.Model):
 	constituency = models.CharField(max_length=128)
 	party = models.ForeignKey(Party)
 	url = models.CharField(max_length=128)
+	notes = models.CharField(max_length=1024)
 	def __unicode__(self):
 		return self.name
 
